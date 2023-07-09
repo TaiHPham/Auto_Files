@@ -25,4 +25,7 @@ def renumber_files(folder_path, output_text, progress_bar, tk):
         output_text.update()
         progress_bar['value'] = i - starting_number + 1  # Set the current progress value
         progress_bar.update()
+        
+    if total_new_files == 0:
+        output_text.insert(tk.END, "No new files to renumber.\n")
 
